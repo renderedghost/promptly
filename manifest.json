@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Promptly for ChatGPT",
+    "description": "Create and reuse ChatGPT prompts",
+    "version": "0.0.1",
+    "permissions": ["storage", "contextMenus", "activeTab"],
+    "icons": {
+        "16": "chatty-16.png",
+        "48": "chatty-48.png",
+        "128": "chatty-128.png"
+    },
+    "action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [{
+        "matches": ["https://chat.openai.com/*"],
+        "js": ["content.js"]
+        }],
+        "host_permissions": ["<all_urls>"]
+    }
