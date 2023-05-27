@@ -1,14 +1,15 @@
-// This function sends the selected text to the popup script
-function sendSelectionToPopup() {
-    let selectedText = window.getSelection().toString();
-    if (selectedText) {
-        chrome.runtime.sendMessage({ type: "textSelection", text: selectedText });
-    }
-}
+let selectedText = '';
 
-// Listening for a message from the popup script
+// Listen for right-click events
+window.addEventListener('contextmenu', (event) => {
+    // Get the selected text, if any
+    selectedText = window.getSelection().toString();
+});
+
+// Listen for messages from the extension
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.type === "getSelectedText") {
-        sendSelectionToPopup();
+    if (request.text === 'requestSelectedText') {
+        // Respond with the selected text
+        sendResponse({selectedText: selectedText});
     }
 });
