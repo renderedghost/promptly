@@ -32,10 +32,14 @@ window.onload = () => {
                 };
                 prompts.push(newPrompt);
                 chrome.storage.local.set({prompts: prompts}, () => {
-                    // Close the window
-                    window.close();
+                    // Clear the selected text
+                    chrome.storage.local.set({selectedText: ''}, () => {
+                        // Close the window
+                        window.close();
+                    });
                 });
             });
         }
     });
+
 };
