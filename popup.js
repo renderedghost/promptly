@@ -1,21 +1,21 @@
 window.onload = () => {
-  // Load prompts from storage
-  chrome.storage.local.get("prompts", ({ prompts = [] }) => {
-    const promptList = document.getElementById("prompt-list");
+    // Load prompts from storage
+    chrome.storage.local.get("prompts", ({ prompts = [] }) => {
+        const promptList = document.getElementById("prompt-list");
 
-    // Clear list
-    promptList.innerHTML = "";
+        // Clear list
+        promptList.innerHTML = "";
 
-    prompts.forEach((prompt) => {
-      const promptElement = createPromptElement(prompt);
-      promptList.appendChild(promptElement);
+        prompts.forEach((prompt) => {
+            const promptElement = createPromptElement(prompt);
+            promptList.appendChild(promptElement);
+        });
     });
-  });
 
-  // Add a click event to the create button
-  document.getElementById("create-button").addEventListener("click", () => {
-    chrome.tabs.create({ url: "createPrompt.html" });
-  });
+    // Add a click event to the create button
+    document.getElementById("create-button").addEventListener("click", () => {
+        chrome.tabs.create({ url: "createPrompt.html" });
+    });
 };
 
 // Helper function to create a prompt element
@@ -52,9 +52,5 @@ function createPromptElement(prompt) {
   li.appendChild(useButton);
   li.appendChild(editButton);
 
-  li.addEventListener("click", () => {
-    // Send message to the background script with the prompt content
-    chrome.runtime.sendMessage({ action: "usePrompt", text: prompt.content });
-  });
   return li;
 }

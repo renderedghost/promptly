@@ -7,7 +7,8 @@
         "storage",
         "contextMenus",
         "tabs",
-        "activeTab"
+        "activeTab",
+        "scripting"
     ],
     "icons": {
         "16": "chatty-16.png",
@@ -25,7 +26,7 @@
         "matches": ["https://chat.openai.com/*"],
         "js": [
             "content.js",
-            "injectionScript.js"
+            "usePrompt.js"
         ]
     }],
     "host_permissions": ["<all_urls>"]
