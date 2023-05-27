@@ -13,3 +13,11 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
         });
     }
 });
+
+chrome.runtime.onMessage.addListener((request, sender) => {
+  if (request.action === "usePrompt") {
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      chrome.tabs.sendMessage(tabs[0].id, request);
+    });
+  }
+});

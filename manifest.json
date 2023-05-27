@@ -6,6 +6,7 @@
     "permissions": [
         "storage",
         "contextMenus",
+        "tabs",
         "activeTab"
     ],
     "icons": {
@@ -22,7 +23,10 @@
     },
     "content_scripts": [{
         "matches": ["https://chat.openai.com/*"],
-        "js": ["content.js"]
+        "js": [
+            "content.js",
+            "injectionScript.js"
+        ]
     }],
     "host_permissions": ["<all_urls>"]
 }
