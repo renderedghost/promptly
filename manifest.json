@@ -11,12 +11,12 @@
         "scripting"
     ],
     "icons": {
-        "16": "chatty-16.png",
-        "48": "chatty-48.png",
-        "128": "chatty-128.png"
+        "16": "promptly-16.png",
+        "48": "promptly-48.png",
+        "128": "promptly-128.png"
     },
     "action": {
-        "default_icon": "chatty-128.png",
+        "default_icon": "promptly-128.png",
         "default_popup": "popup.html"
     },
     "background": {
