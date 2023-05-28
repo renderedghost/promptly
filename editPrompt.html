@@ -1,20 +1,54 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Edit Prompt</title>
 </head>
 
-<body>
-    <h1>Edit Prompt</h1>
-    <label for="prompt-title">Title:</label><br>
-    <input type="text" id="prompt-title"><br>
-    <label for="prompt-content">Content:</label><br>
-    <textarea id="prompt-content"></textarea><br>
-    <button id="save-button">Save</button>
-    <!-- <button id="delete-button" value="Delete">Save</button>
-    <input type="button" id="delete-button" value="Delete"> -->
+  <body>
+    <main id="prompt-form">
+      <h1>Edit Prompt</h1>
+
+    <!-- Form -->
+      <form>
+        <div class="section">
+          <label for="prompt-title">Title</label>
+
+          <input
+            type="text"
+            id="prompt-title"
+            class="input"
+            maxlength="512"
+            placeholder="Name your prompt"
+          />
+          <p id="title-error" class="error-message"></p>
+        </div>
+
+        <div class="section">
+          <label for="prompt-content">Content</label>
+          <textarea
+            id="prompt-content"
+            class="input"
+            rows="10"
+            spellcheck="true"
+            placeholder="Add your prompt"
+            maxlength="10000"
+            autocomplete="off"
+          ></textarea>
+          <p id="content-error" class="error-message"></p>
+        </div>
+
+        <!-- Submit -->
+        <div class="button-group">
+          <button id="save-button" class="primary">Save Changes</button>
+          <button id="cancel-button">Cancel</button>
+        </div>
+      </form>
+
+    <!-- Script -->
     <script src="editPrompt.js"></script>
 </body>
-
 </html>

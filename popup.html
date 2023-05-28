@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Promptly for ChatGPT</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Promptly for ChatGPT</title>
+  </head>
 
-    <body>
-        <main>
-        <div id="container">
-            <button id="create-button">Create Prompt</button>
-            <button id="download-button">Download All Prompts</button>
-            <ul id="prompt-list">
-                <!-- Prompts will be appended here -->
-            </ul>
-        </div>
-        </main>
-        <script src="popup.js"></script>
-    </body>
+  <body>
+    <main id="prompt-form">
+      <h1>Promptly for ChatGPT</h1>
+
+    <!-- Form -->
+      <div class="button-group">
+        <button id="create-button">Create Prompt</button>
+        <button id="download-button">Download All Prompts</button>
+      </div>
+      <ul id="prompt-list">
+          <!-- Prompts will be appended here -->
+      </ul>
+    </main>
+    <script src="popup.js"></script>
+  </body>
 </html>

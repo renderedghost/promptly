@@ -1,385 +1,327 @@
-/* Document
-   ========================================================================== */
+/* sizes */
+:root {
+    --size-px: 1px;
+    --size-pxx: 2px;
+    --size-xxs: 0.125rem;
+    --size-xs: 0.25rem;
+    --size-s: 0.5rem;
+    --size-base: 1rem;
+    --size-l: 2rem;
+    --size-xl: 4rem;
+}
 
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
+/* Font */
+:root {
+    /* Font Family */
+    --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family: var(--system-ui);
+
+    /* Font Sizes */
+    --font-size-xs: 0.75rem;
+    --font-size-s: 0.875rem;
+    --font-size-base: 1rem;
+    --font-size-l: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 2rem;
+
+    /* Font Weights */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi: 600;
+    --font-weight-bold: 700;
+
+    /* Line Heights */
+    --line-height-normal: 1.5;
+    --line-height-dense: 1.2;
+    --line-height-compact: 1;
+}
+
+/* Neutral Colours */
+:root {
+    --color-mono-00: hsl(240, 8%, 0%);
+    --color-mono-05: hsl(240, 8%, 5%);
+    --color-mono-10: hsl(240, 8%, 10%);
+    --color-mono-15: hsl(240, 8%, 15%);
+    --color-mono-20: hsl(240, 8%, 20%);
+    --color-mono-25: hsl(240, 8%, 25%);
+    --color-mono-30: hsl(240, 8%, 30%);
+    --color-mono-35: hsl(240, 8%, 35%);
+    --color-mono-40: hsl(240, 8%, 40%);
+    --color-mono-45: hsl(240, 8%, 45%);
+    --color-mono-50: hsl(240, 8%, 50%);
+    --color-mono-55: hsl(240, 8%, 55%);
+    --color-mono-60: hsl(240, 8%, 60%);
+    --color-mono-65: hsl(240, 8%, 65%);
+    --color-mono-70: hsl(240, 8%, 70%);
+    --color-mono-75: hsl(240, 8%, 75%);
+    --color-mono-80: hsl(240, 8%, 80%);
+    --color-mono-85: hsl(240, 8%, 85%);
+    --color-mono-90: hsl(240, 8%, 90%);
+    --color-mono-95: hsl(240, 8%, 95%);
+    --color-mono-100: hsl(240, 8%, 100%);
+}
+
+/* Mono Semantics */
+
+:root {
+    --surface-1: var(--color-mono-100);
+    --surface-2: var(--color-mono-95);
+    --surface-3: var(--color-mono-90);
+    --content-1: var(--color-mono-00);
+    --content-2: var(--color-mono-25);
+    --content-3: var(--color-mono-40);
+    --content-i: var(--color-mono-100);
+    --border-1: var(--color-mono-00);
+    --border-2: var(--color-mono-25);
+    --border-3: var(--color-mono-40);
+    --border-4: var(--color-mono-75);
+}
+
+/* Semantic Colours */
+:root {
+    /* HSLs */
+    --color-emphasise-h: 240;
+    --color-emphasise-s: 100%;
+    --color-emphasise-l: 40%;
+
+    --color-default-h: 240;
+    --color-default-s: 5%;
+    --color-default-l: 100%;
+
+    --color-success-h: 123;
+    --color-success-s: 61%;
+    --color-success-l: 39%;
+
+    --color-caution-h: 354;
+    --color-caution-s: 70%;
+    --color-caution-l: 50%;
+
+    --color-highlight-h: 45;
+    --color-highlight-s: 100%;
+    --color-highlight-l: 50%;
+
+    /* emphasise */
+    --color-emphasise: hsl(var(--color-emphasise-h), var(--color-emphasise-s), var(--color-emphasise-l));
+    --color-emphasise-hover: hsl(var(--color-emphasise-h), var(--color-emphasise-s), calc(var(--color-emphasise-l) - 5%));
+    --color-emphasise-active: hsl(var(--color-emphasise-h), var(--color-emphasise-s), calc(var(--color-emphasise-l) - 10%));
+
+    /* default */
+    --color-default: hsl(var(--color-default-h), var(--color-default-s), var(--color-default-l));
+    --color-default-hover: hsl(var(--color-default-h), var(--color-default-s), calc(var(--color-default-l) - 5%));
+    --color-default-active: hsl(var(--color-default-h), var(--color-default-s), calc(var(--color-default-l) - 10%));
+
+    /* success */
+    --color-success: hsl(var(--color-success-h), var(--color-success-s), var(--color-success-l));
+    --color-success-hover: hsl(var(--color-success-h), var(--color-success-s), calc(var(--color-success-l) - 5%));
+    --color-success-active: hsl(var(--color-success-h), var(--color-success-s), calc(var(--color-success-l) - 10%));
+
+    /* caution */
+    --color-caution: hsl(var(--color-caution-h), var(--color-caution-s), var(--color-caution-l));
+    --color-caution-hover: hsl(var(--color-caution-h), var(--color-caution-s), calc(var(--color-caution-l) - 5%));
+    --color-caution-active: hsl(var(--color-caution-h), var(--color-caution-s), calc(var(--color-caution-l) - 10%));
+
+    /* highlight */
+    --color-highlight: hsl(var(--color-highlight-h), var(--color-highlight-s), var(--color-highlight-l));
+    --color-highlight-hover: hsl(var(--color-highlight-h), var(--color-highlight-s), calc(var(--color-highlight-l) - 5%));
+    --color-highlight-active: hsl(var(--color-highlight-h), var(--color-highlight-s), calc(var(--color-highlight-l) - 10%));
+}
+
+/* Borders */
+:root {
+    --border-radius-s: var(--size-xxs);
+    --border-radius-base: var(--size-xs);
+    --border-radius-l: var(--size-s);
+    --border-width-base: var(--size-px);
+    --border-width-heavy: var(--size-xxs);
+    --border-width-thick: var(--size-xs);
+}
+
+/* Fundamentals */
 
 html {
-    line-height: 1.15;
-    /* 1 */
-    -webkit-text-size-adjust: 100%;
-    /* 2 */
+    font-family: var(--font-family);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
 }
-
-/* Sections
-   ========================================================================== */
-
-/**
- * Remove the margin in all browsers.
- */
 
 body {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    letter-spacing: 0.2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--surface-1);
+    color: var(--content-1);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-base);
+    width: 960px;
+    max-width: calc(100% - 4rem);
+    margin: 0 auto;
+}
+
+#prompt-form {
+    margin: 4rem;
+}
+
+/* Content */
+
+p {
+    font-size: inherit;
+    line-height: inherit;
     margin: 0;
 }
 
-/**
- * Render the `main` element consistently in IE.
- */
-
-main {
-    display: block;
+.description {
+    color: var(--content-2);
+    padding-bottom: var(--size-s);
 }
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
 
 h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
+    font-size: var(--font-size-xxl);
+    line-height: var(--line-height-normal);
+    font-weight: var(--font-weight-semi);
 }
 
-/* Grouping content
-   ========================================================================== */
+h3 {}
 
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
+h3 {}
 
-hr {
-    box-sizing: content-box;
-    /* 1 */
-    height: 0;
-    /* 1 */
-    overflow: visible;
-    /* 2 */
+/* Interactions */
+
+:focus {
+    outline-style: solid;
+    outline-width: var(--border-width-thick);
+    outline-color: var(--color-highlight);
+    outline-offset: var(--size-xxs);
 }
-
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-pre {
-    font-family: monospace, monospace;
-    /* 1 */
-    font-size: 1em;
-    /* 2 */
-}
-
-/* Text-level semantics
-   ========================================================================== */
-
-/**
- * Remove the gray background on active links in IE 10.
- */
 
 a {
-    background-color: transparent;
+    color: var(--color-emphasise);
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
-
-abbr[title] {
-    border-bottom: none;
-    /* 1 */
-    text-decoration: underline;
-    /* 2 */
-    text-decoration: underline dotted;
-    /* 2 */
+a:hover {
+    color: var(--color-emphasise-hover);
 }
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-    font-weight: bolder;
+a:active {
+    color: var(--color-emphasise-active);
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-samp {
-    font-family: monospace, monospace;
-    /* 1 */
-    font-size: 1em;
-    /* 2 */
+a:focus {
+    border-radius: var(--border-radius-s);
 }
 
-/**
- * Add the correct font size in all browsers.
- */
-
-small {
-    font-size: 80%;
+.button-group {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-s);
 }
 
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
-
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+button {
+    padding: var(--size-base);
+    border: none;
+    border-radius: var(--border-radius-base);
+    border-width: var(--border-width-heavy);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-emphasise);
+    background-color: var(--color-default);
 }
 
-sub {
-    bottom: -0.25em;
+button:hover {
+    color: var(--color-emphasise-hover);
+    background-color: var(--color-default-hover);
 }
 
-sup {
-    top: -0.5em;
+button:active {
+    color: var(--color-emphasise-active);
+    background-color: var(--color-default-active);
 }
 
-/* Embedded content
-   ========================================================================== */
-
-/**
- * Remove the border on images inside links in IE 10.
- */
-
-img {
-    border-style: none;
+button.primary {
+    background-color: var(--color-emphasise);
+    color: var(--content-i)
 }
 
-/* Forms
-   ========================================================================== */
-
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-    font-family: inherit;
-    /* 1 */
-    font-size: 100%;
-    /* 1 */
-    line-height: 1.15;
-    /* 1 */
-    margin: 0;
-    /* 2 */
+button.primary:hover {
+    background-color: var(--color-emphasise-hover);
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
-
-button,
-input {
-    /* 1 */
-    overflow: visible;
+button.primary:active {
+    background-color: var(--color-emphasise-active);
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
+button.secondary {}
 
-button,
-select {
-    /* 1 */
-    text-transform: none;
+button.secondary:hover {}
+
+button.secondary:active {}
+
+button.caution {}
+
+button.caution:hover {}
+
+button.caution:active {}
+
+/* forms */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-l);
 }
 
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-    -webkit-appearance: button;
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-s);
 }
 
-/**
- * Remove the inner border and padding in Firefox.
- */
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
+label {
+    font-size: var(--font-size-l);
+    line-height: var(--line-height-normal);
+    font-weight: var(--font-weight-medium);
 }
 
-/**
- * Restore the focus styles unset by the previous rule.
- */
+input {}
 
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-    outline: 1px dotted ButtonText;
-}
+textarea {}
 
-/**
- * Correct the padding in Firefox.
- */
-
-fieldset {
-    padding: 0.35em 0.75em 0.625em;
-}
-
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *    `fieldset` elements in all browsers.
- */
-
-legend {
-    box-sizing: border-box;
-    /* 1 */
-    color: inherit;
-    /* 2 */
-    display: table;
-    /* 1 */
-    max-width: 100%;
-    /* 1 */
-    padding: 0;
-    /* 3 */
-    white-space: normal;
-    /* 1 */
-}
-
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-    vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
-textarea {
-    overflow: auto;
-}
-
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
-
-[type="checkbox"],
-[type="radio"] {
-    box-sizing: border-box;
-    /* 1 */
-    padding: 0;
-    /* 2 */
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-    height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
-[type="search"] {
-    -webkit-appearance: textfield;
-    /* 1 */
-    outline-offset: -2px;
-    /* 2 */
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-
-::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    /* 1 */
-    font: inherit;
-    /* 2 */
-}
-
-/* Interactive
-   ========================================================================== */
-
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
-
-details {
+.input {
     display: block;
+    box-sizing: border-box;
+    padding: var(--size-base);
+    border-radius: var(--border-radius-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-normal);
+    background-color: var(--surface-2);
+    color: var(--content-1);
+    border: none;
 }
 
-/*
- * Add the correct display in all browsers.
- */
-
-summary {
-    display: list-item;
+.input::placeholder {
+    color: var(--content-3);
 }
 
-/* Misc
-   ========================================================================== */
+.input:hover {}
 
-/**
- * Add the correct display in IE 10+.
- */
-
-template {
-    display: none;
+.error-message {
+    color: var(--color-caution);
 }
 
-/**
- * Add the correct display in IE 10.
- */
+/* actions */
 
-[hidden] {
-    display: none;
-}
 
-/* Layout */
 
-main {
-    display:block;
-    width:30rem;
-    padding:1rem;
-}
+.action-bar {}
+
+#prompt-title {}
+
+#prompt-content {}
