@@ -25,8 +25,15 @@ function createPromptElement(prompt) {
   const title = document.createElement("p");
   title.textContent = prompt.title;
 
+  const preview = document.createElement("p");
+  preview.textContent = prompt.content;
+  preview.style.whiteSpace = "nowrap";
+  preview.style.overflow = "hidden";
+  preview.style.textOverflow = "ellipsis";
+
   const useButton = document.createElement("button");
   useButton.textContent = "Use";
+  useButton.classList.add("small");
   useButton.addEventListener("click", () => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       const activeTab = tabs[0];
@@ -41,6 +48,7 @@ function createPromptElement(prompt) {
 
   const editButton = document.createElement("button");
   editButton.textContent = "Edit";
+  editButton.classList.add("small");
   editButton.addEventListener("click", () => {
     // Save the ID of the prompt being edited
     chrome.storage.local.set({ editId: prompt.id }, () => {
@@ -49,6 +57,7 @@ function createPromptElement(prompt) {
   });
 
   li.appendChild(title);
+  li.appendChild(preview);
   li.appendChild(useButton);
   li.appendChild(editButton);
 

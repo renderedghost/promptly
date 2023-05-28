@@ -165,8 +165,15 @@ main {
     margin: 0 auto;
 }
 
-#prompt-form {
-    margin: 4rem;
+main#prompt-form{
+    padding: var(--size-xl) 0;
+}
+
+main#popup{
+    width: calc(100% - var(--size-l));
+    max-width: calc(100% - var(--size-l));
+    margin: 0;
+    padding: var(--size-l) 0;
 }
 
 /* Content */
@@ -191,6 +198,13 @@ h1 {
 h3 {}
 
 h3 {}
+
+ul {
+    list-style-type: none;
+    display: block;
+    margin:0;
+    padding:0;
+}
 
 /* Interactions */
 
@@ -248,6 +262,10 @@ button:active {
 button.primary {
     background-color: var(--color-emphasise);
     color: var(--content-i)
+}
+
+button.small {
+    padding: var(--size-s);
 }
 
 button.primary:hover {
