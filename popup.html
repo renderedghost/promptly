@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="reset.css" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Promptly for ChatGPT</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="reset.css" />
+	<link rel="stylesheet" href="style.css" />
+	<title>Promptly for ChatGPT</title>
 </head>
 
 <body id="popup-frame">
-  <main id="popup">
-    <div id="bar">
-      <!-- Search Box -->
-      <div id="search">
-        <input type="text" id="search-box" class="input small" placeholder="Search titles">
-      </div>
-      <!-- Action Buttons -->
-      <div class="button-group">
-        <button title="Download all your prompts as a JSON file" id="download-button" class="small">Download Prompts</button>
-        <button id="create-button" class="small primary">Create Prompt</button>
-      </div>
-    </div>
-
-    <ul id="prompt-list">
-      <!-- Prompts will be appended here -->
-    </ul>
-  </main>
-  <script src="popup.js"></script>
+	<main id="popup">
+		<div id="bar">
+			<!-- Search Box -->
+			<div id="search">
+				<input type="text" id="search-box" class="input small" placeholder="Search titles">
+			</div>
+			<!-- Action Buttons -->
+			<div class="button-group">
+				<button id="options-button" class="small">Settings</button>
+				<button id="create-button" class="small primary">Create Prompt</button>
+			</div>
+		</div>
+		<ul id="prompt-list">
+			<!-- Prompts will be appended here -->
+		</ul>
+	</main>
+	<script src="popup.js"></script>
 </body>
 </html>

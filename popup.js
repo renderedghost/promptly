@@ -92,3 +92,8 @@ function usePrompt(content) {
 	}
 });
 }
+
+// Add a click event to the options button
+document.getElementById("options-button").addEventListener("click", () => {
+    chrome.runtime.openOptionsPage();
+});
