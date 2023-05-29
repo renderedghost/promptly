@@ -68,3 +68,22 @@ window.onload = () => {
 document.getElementById("cancel-button").addEventListener("click", () => {
   window.close();
 });
+
+document.getElementById("delete-button").addEventListener("click", () => {
+  // Ask the user to confirm deletion
+  const userConfirmed = confirm("Are you sure you want to delete this prompt?");
+
+  if (userConfirmed) {
+    chrome.storage.local.get(
+      ["prompts", "editId"],
+      ({ prompts = [], editId }) => {
+        const updatedPrompts = prompts.filter((p) => p.id !== editId);
+
+        chrome.storage.local.set({ prompts: updatedPrompts }, () => {
+          // Close the tab after the prompt is deleted
+          window.close();
+        });
+      }
+    );
+  }
+});

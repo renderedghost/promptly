@@ -6,6 +6,7 @@
     --size-xs: 0.25rem;
     --size-s: 0.5rem;
     --size-base: 1rem;
+    --size-m: 1.5rem;
     --size-l: 2rem;
     --size-xl: 4rem;
 }
@@ -175,7 +176,7 @@ main#popup{
     font-size: var(--font-size-s);
 }
 
-#top-bar {
+#bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -266,36 +267,40 @@ a:focus {
 }
 
 button {
-    padding: var(--size-base);
-    border: none;
-    border-radius: var(--border-radius-base);
-    border-width: var(--border-width-heavy);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-normal);
-    font-weight: var(--font-weight-medium);
-    color: var(--color-emphasise);
+    /* border-color: var(--color-emphasise); */
+    /* border-style: solid; */
+    /* border-width: var(--border-width-heavy); */
+    border:none;
     background-color: var(--color-default);
+    border-radius: var(--border-radius-base);
+    color: var(--color-emphasise);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    line-height: var(--line-height-normal);
+    padding: var(--size-base) var(--size-m);
 }
 
 button:hover {
     color: var(--color-emphasise-hover);
+    /* border-color: var(--color-emphasise-hover); */
     background-color: var(--color-default-hover);
 }
 
 button:active {
     color: var(--color-emphasise-active);
+    /* border-color: var(--color-emphasise-active); */
     background-color: var(--color-default-active);
-}
-
-button.primary {
-    background-color: var(--color-emphasise);
-    color: var(--content-i)
 }
 
 button.small,
 input.small {
     font-size: var(--font-size-s);
-    padding: var(--size-s);
+    padding: var(--size-s) var(--size-base);
+}
+
+button.primary {
+    background-color: var(--color-emphasise);
+    color: var(--content-i)
 }
 
 button.primary:hover {
@@ -306,17 +311,18 @@ button.primary:active {
     background-color: var(--color-emphasise-active);
 }
 
-button.secondary {}
+button.caution {
+    background-color: var(--color-caution);
+    color: var(--content-i)
+}
 
-button.secondary:hover {}
+button.caution:hover {
+    background-color: var(--color-caution-hover);
+}
 
-button.secondary:active {}
-
-button.caution {}
-
-button.caution:hover {}
-
-button.caution:active {}
+button.caution:active {
+    background-color: var(--color-caution-active);
+}
 
 /* forms */
 
