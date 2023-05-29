@@ -219,6 +219,9 @@ ul {
     padding:0;
 }
 
+.prompt-link {
+    text-decoration: none;
+}
 .prompt-title {
     font-weight: var(--font-weight-medium);
 }
