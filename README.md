@@ -2,31 +2,33 @@
 
 > Chrome extension to create and reuse ChatGPT prompts
 
-## Benefits
-
 * Focus on **generating quality responses** instead of wasting time rewriting frequently used prompts.
 
 * **Create, edit, and re-use prompts** *without* navigating through old chats or notes.
 
-## Features
+## Getting Started
 
 ### 1. Create a New Prompt
 
-* Right-click any selected text — up to 10,000 characters — in your browser and click `Save as Prompt` or click `Create` button to start from scratch.
-* Add a memorable title for easy reference.
-
+* Right-click any selected text (max 10,000 characters) in your browser and click `Save as Prompt` _OR_ click `Create` to start from scratch.
+* Add a memorable Title for easy reference.
 
 ### 2. Use a Prompt
 
-Click `Use` to insert the prompt into the messenger on "https://chat.openai.com".
+* Open the extension from the Chrome toolbar
+* Search for your Prompt by **Title**.
+* Click the **Title** to insert it into the message composer on "https://chat.openai.com".
 
 ### 3. Edit a Prompt
 
-Click `Edit` to modify the title and content of the selected prompt.
+* Open the extension from the browser toolbar.
+* Click `Edit` to modify the title and content of the selected prompt OR press `Delete` to remove it completely.
 
-### 4. Download all Prompts
+### 4. Export all Prompts
 
-Click `Export` to save all your prompts as a `.json` file.
+* Open the extension from the browser toolbar.
+* Click `Settings` in the extension' popup.
+* Click `Export` to download all your prompts as a `.json` file.
 
 ## Install from GitHub
 
@@ -44,9 +46,12 @@ To use this extension, follow these steps:
 
 ## Roadmap
 
-- [ ] Export Prompts
-- [ ] Add Search Functionality
-- [ ] Delete prompts
+- [x] Export Prompts
+- [x] Add Search Functionality
+- [x] Delete prompts
+- [ ] New Branding
+- [ ] Integrate into ChatGPT text box for easy insertion with `@` (e.g. `@generate social media posts`)
+- [ ] Use Variables
 
 ## Contributions
 
