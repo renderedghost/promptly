@@ -16,7 +16,7 @@
     /* Font Family */
     --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --font-family: var(--system-ui);
-    
+
     /* Font Sizes */
     --font-size-xs: 0.75rem;
     --font-size-s: 0.875rem;
@@ -24,13 +24,13 @@
     --font-size-l: 1.25rem;
     --font-size-xl: 1.5rem;
     --font-size-xxl: 2rem;
-    
+
     /* Font Weights */
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semi: 600;
     --font-weight-bold: 700;
-    
+
     /* Line Heights */
     --line-height-normal: 1.5;
     --line-height-dense: 1.2;
@@ -84,43 +84,43 @@
     --color-emphasise-h: 240;
     --color-emphasise-s: 100%;
     --color-emphasise-l: 40%;
-    
+
     --color-default-h: 240;
     --color-default-s: 5%;
     --color-default-l: 100%;
-    
+
     --color-success-h: 123;
     --color-success-s: 61%;
     --color-success-l: 39%;
-    
+
     --color-caution-h: 354;
     --color-caution-s: 70%;
     --color-caution-l: 50%;
-    
+
     --color-highlight-h: 45;
     --color-highlight-s: 100%;
     --color-highlight-l: 50%;
-    
+
     /* emphasise */
     --color-emphasise: hsl(var(--color-emphasise-h), var(--color-emphasise-s), var(--color-emphasise-l));
     --color-emphasise-hover: hsl(var(--color-emphasise-h), var(--color-emphasise-s), calc(var(--color-emphasise-l) - 5%));
     --color-emphasise-active: hsl(var(--color-emphasise-h), var(--color-emphasise-s), calc(var(--color-emphasise-l) - 10%));
-    
+
     /* default */
     --color-default: hsl(var(--color-default-h), var(--color-default-s), var(--color-default-l));
     --color-default-hover: hsl(var(--color-default-h), var(--color-default-s), calc(var(--color-default-l) - 5%));
     --color-default-active: hsl(var(--color-default-h), var(--color-default-s), calc(var(--color-default-l) - 10%));
-    
+
     /* success */
     --color-success: hsl(var(--color-success-h), var(--color-success-s), var(--color-success-l));
     --color-success-hover: hsl(var(--color-success-h), var(--color-success-s), calc(var(--color-success-l) - 5%));
     --color-success-active: hsl(var(--color-success-h), var(--color-success-s), calc(var(--color-success-l) - 10%));
-    
+
     /* caution */
     --color-caution: hsl(var(--color-caution-h), var(--color-caution-s), var(--color-caution-l));
     --color-caution-hover: hsl(var(--color-caution-h), var(--color-caution-s), calc(var(--color-caution-l) - 5%));
     --color-caution-active: hsl(var(--color-caution-h), var(--color-caution-s), calc(var(--color-caution-l) - 10%));
-    
+
     /* highlight */
     --color-highlight: hsl(var(--color-highlight-h), var(--color-highlight-s), var(--color-highlight-l));
     --color-highlight-hover: hsl(var(--color-highlight-h), var(--color-highlight-s), calc(var(--color-highlight-l) - 5%));
@@ -247,6 +247,7 @@ ul {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    font-size: var(--font-size-s);
 }
 
 /* Interactions */
@@ -358,10 +359,6 @@ label {
     font-weight: var(--font-weight-medium);
 }
 
-input {}
-
-textarea {}
-
 .input {
     display: block;
     box-sizing: border-box;
@@ -377,8 +374,6 @@ textarea {}
 .input::placeholder {
     color: var(--content-3);
 }
-
-.input:hover {}
 
 #search-box {
     display: flex;

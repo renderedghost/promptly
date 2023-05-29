@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Promptly for ChatGPT",
     "description": "Create and reuse ChatGPT prompts",
-    "version": "0.0.1",
+    "version": "1.0.1",
     "permissions": [
         "storage",
         "contextMenus",
@@ -11,13 +11,18 @@
         "scripting"
     ],
     "icons": {
-        "16": "promptly-16.png",
-        "48": "promptly-48.png",
-        "128": "promptly-128.png"
+        "16": "promptly-32.png",
+        "48": "promptly-96.png",
+        "128": "promptly-256.png"
     },
     "options_page": "options.html",
     "action": {
-        "default_icon": "promptly-128.png",
+        "default_icon": {
+          "16": "promptly-32.png",
+          "48": "promptly-96.png",
+          "128": "promptly-256.png"
+        },
+        "default_title": "Promptly for ChatGPT",
         "default_popup": "popup.html"
     },
     "background": {
@@ -29,6 +34,6 @@
             "content.js",
             "usePrompt.js"
         ]
-    }],
-    "host_permissions": ["<all_urls>"]
-}
+        }],
+        "host_permissions": ["<all_urls>"]
+    }
