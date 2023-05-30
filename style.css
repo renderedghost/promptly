@@ -394,6 +394,14 @@ label {
     gap: var(--size-base);
 }
 
+p.prompt-title:before {
+    content: 'Use "';
+}
+
+p.prompt-title:after {
+    content: '"';
+}
+
 .prompt-item {
     display: flex;
     flex: auto;
