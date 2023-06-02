@@ -7,8 +7,7 @@
         "storage",
         "contextMenus",
         "tabs",
-        "activeTab",
-        "scripting"
+        "activeTab"
     ],
     "icons": {
         "16": "promptly-32.png",
